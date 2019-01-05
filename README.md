@@ -16,9 +16,9 @@
 
 **Linux**
 
-- [1.linxu简介](linux简介.md)
+- [1.linxu简介](/linux/linux简介.md)
 
-- [2.linux常用指令大全](linux指令.md)
+- [2.linux常用指令大全](/linux/linux指令.md)
 
 ---
 
