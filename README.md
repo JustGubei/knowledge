@@ -12,6 +12,8 @@
 
 - [2.git常用命令](/git/git常用指令.md)
 
+- [3.ssh密钥](/git/ssh密钥.md)
+
 ---
 
 **Linux**
