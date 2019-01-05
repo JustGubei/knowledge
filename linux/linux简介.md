@@ -51,4 +51,4 @@ Linux的发行版说简单点就是将Linux内核与应用软件做一个打包�
 
 
 更多linux教程请参照
-[linux菜鸟教程](http://http://www.runoob.com/linux/linux-install.html)
+[linux菜鸟教程](http://www.runoob.com/linux/linux-install.html)
