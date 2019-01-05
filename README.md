@@ -8,9 +8,9 @@
 
 **Git**
 
-- [1.git简介](/git/git1.md)
+- [1.git简介](/git/git简介.md)
 
-- [2.git常用命令](/git/git2.md)
+- [2.git常用命令](/git/git常用指令.md)
 
 ---
 
