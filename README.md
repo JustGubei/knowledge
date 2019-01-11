@@ -44,7 +44,7 @@
 
 - [5.分页与图片上传.md](/django/分页与图片上传.md)
 
-- [6.cookie session和csrf](/django/cookie session和csrf.md)
+- [6.cookie session和csrf](/django/cookie和session和csrf.md)
 
 
 
