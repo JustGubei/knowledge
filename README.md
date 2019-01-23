@@ -46,7 +46,7 @@
 
 - [6.cookie session和csrf](/django/cookie和session和csrf.md)
 
-- [7.模型层](/django/django模型层.md）
+- [7.模型层](/django/django模型层.md)
 
 ---
 
