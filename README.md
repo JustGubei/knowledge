@@ -51,6 +51,7 @@
 ---
 
 
+
 **Flask**
 
 - [1.flask入门](/flask/flask-login.md)
@@ -61,8 +62,9 @@
 
 - [4.数据库和session](/flask/数据库和session.md)
 
-- [5.flask-login](/flask/flask-login.md)
+- [5.数据库的增删改查](/flask/数据库增删改查.md)
 
+- [6.flask-login](/flask/flask-login.md)
 
 
 ---
