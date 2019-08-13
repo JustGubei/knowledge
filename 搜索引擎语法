@@ -1,0 +1,592 @@
+#搜索引擎语法
+---
+## 请选择你想要了解的搜索引擎
+---
++ ###[Baidu](#1.Baidu)
+- ###[Chrome](#2.Chrome)
++ ###[Shodan](#3.Shodan)
+- ###[Censys](#4.Censys)
++ ###[FoFa](#5.FoFa)
+- ###[ZoomEye](#6.ZoomEye)
++ ###[Dnsdb](#7.Dnsdb)
+
+
+---
+#1.Baidu
+---
+####1.把搜索范围限定在网页标题中 —— intitle
+
+网页标题通常是对网页内容提纲挈领式的归纳。把查询内容范围限定在网页标题中，有时能获得良好的效果。
+
+    新疆 intitle:雪菊
+
+####2.把搜索范围限定在特定站点中 —— site
+
+-有时候，如果知道某个站点中有自己需要找的东西，就可以把搜索范围限定在这个站点中，提高查询效率。
+
+    胡歌 insite:www.sina.com.cn
+
+####3.把搜索范围限定在url链接中 —— inurl
+
+-网页url中的某些信息，常常有某种有价值的含义。如果对搜索结果的url做某种限定，就可以获得良好的效果。
+
+    csdn博客 inurl:py_shell
+
+####4.精确匹配 —— 双引号“”和书名号《》 
+
+-如果输入的查询词很长，百度在经过分析后，给出的搜索结果中的查询词，可能是拆分的。如果不满意，可以尝试让百度不拆分查询词。给查询词加上双引号或书名号，就可以达到这种效果。
+
+    “手机” / 《手机》 
+
+####5.要求搜索结果中不含特定查询词- 
+
+-如果你发现搜索结果中，有某一类网页是你不希望看见的，而且，这些网页都包含特定的关键词，那么用减号语法，就可以去除所有这些含有特定关键词的网页。
+
+    电影 -搜狐
+
+####6.要求搜索结果中包含特定查询词+
+
+-如果你希望搜索结果中，希望包含特定的关键词，那么用加号语法。
+
+    音乐 +古风
+
+####7.要求搜索范围限定在指定文档格式中 —— filetype
+
+-如果你希望查找某一类型的文档资料，那么使用filetype语法就十分简单了。
+
+    python教程 filetype:pdf
+
+####8.百度高级搜索页面
+
+ 如果你不想用以上几种方式进行搜索，那么ok 。还有一个傻瓜式的方法
+ - [点我搜索](https://www.baidu.com/gaoji/advanced.html "点我搜索")
+
+---
+#2.Chrome
+---
+####1、完全匹配搜索
+
+把搜索词放在双引号中，代表完全匹配搜索，也就是说搜索结果返回的页面包含双引号中出现的所有的词，连顺序也必须完全匹配。bd和Google 都支持这个指令。
+
+    “seo方法图片”
+
+#### 2、减号代表搜索不包含减号后面的词的页面
+
+使用这个指令时减号前面必须是空格，减号后面没有空格，紧跟着需要排除的词。Google 和bd都支持这个指令。
+
+    搜索 -引擎
+
+返回的则是包含“搜索”这个词，却不包含“引擎”这个词的结果
+
+#### 3、星号代表任何文字
+
+星号*是常用的通配符，也可以用在搜索中。百度不支持*号搜索指令。
+
+    搜索*擎
+
+其中的*号代表任何文字。返回的结果就不仅包含“搜索引擎”，还包含了“搜索收擎”，“搜索巨擎”等内容。
+
+###4、inurl: 指令用于搜索查询词出现在url 中的页面。
+
+bd和Google 都支持inurl 指令。inurl 指令支持中文和英文。
+
+    inurl:搜索引擎优化
+
+返回的结果都是网址url 中包含“搜索引擎优化”的页面。由于关键词出现在url 中对排名有一定影响，使用inurl:搜索可以更准确地找到竞争对手。
+
+####5、inanchor:指令返回的结果是导入链接锚文字中包含搜索词的页面
+
+inanchor:指令返回的结果是导入链接锚文字中包含搜索词的页面。百度不支持inanchor。
+
+    inanchor:点击这里
+
+返回的结果页面本身并不一定包含“点击这里”这四个字，而是指向这些页面的链接锚文字中出现了“点击这里”这四个字。
+
+可以用来找到某个关键词的竞争对收，而且这些竞争对手往往是做过SEO 的。研究竞争对手页面有哪些外部链接，就可以找到很多链接资源。
+
+####6、intitle: 指令返回的是页面title 中包含关键词的页面
+
+Google 和bd都支持intitle 指令。
+
+使用intitle 指令找到的文件是更准确的竞争页面。如果关键词只出现在页面可见文字中，而没有出现在title 中，大部分情况是并没有针对
+
+关键词进行优化，所以也不是有力的竞争对手。
+
+####7、allintitle:搜索返回的是页面标题中包含多组关键词的文件。
+
+    allintitle:SEO 搜索引擎优化 相当于：intitle:SEO intitle:搜索引擎优化
+
+返回的是标题中中既包含“SEO”，也包含“搜索引擎优化”的页面
+
+####8、allinurl
+
+与allintitle: 类似。
+
+allinurl:SEO 搜索引擎优化
+
+就相当于 ：inurl:SEO inurl:搜索引擎优化
+
+###9、搜索特定文件格式
+
+filetype用于搜索特定文件格式。Google 和bd都支持filetype 指令。
+
+     filetype:pdf SEO
+
+返回的就是包含SEO 这个关键词的所有pdf 文件。
+
+####10、搜索某个域名下的所有文件。
+
+site:是SEO 最熟悉的高级搜索指令，用来搜索某个域名下的所有文件。
+
+####11、linkdomain
+
+linkdomain:指令只适用于雅虎，返回的是某个域名的反向链接。雅虎的反向链接数据还比较准
+
+确，是SEO人员研究竞争对手外部链接情况的重要工具之一。
+
+    linkdomain:链接：http://cnseotool.com -site:链接：http://cnseotool.com
+
+得到的就是点石网站的外部链接，因为-site:链接：http://cnseotool.com 已经排除了点石本身的页面，也就是内部链接，剩下的就都是外
+
+部链接了。
+
+####12、搜索与某个网站有关联的页面
+
+related:指令只适用于Google，返回的结果是与某个网站有关联的页面。
+
+    related:链接：http://cnseotool.com
+
+####13. 一些符号
+
+ +　　把google可能忽略的字列如查询范围。
+
+ -　　把某个字忽略，例子：新加 -坡。
+
+ ~　　同意词。
+
+ .　　单一的通配符。
+
+ *　　通配符，可代表多个字母。
+
+ ""　精确查询。
+
+####14.利用goole可以搜索到互联网上可以直接下载到的数据库文件
+
+
+- inurl:editor/db/
+- inurl:eWebEditor/db/
+- inurl:bbs/data/
+- inurl:databackup/
+- inurl:blog/data/
+- inurl:\boke\data
+- inurl:bbs/database/
+- inurl:conn.asp
+- inc/conn.asp
+- Server.mapPath(“.mdb”)
+- allinurl:bbs data
+- filetype:mdb inurl:database
+- filetype:inc conn
+- inurl:data filetype:mdb
+- intitle:"index of" data
+
+
+####15.利用goole搜索敏感信息
+
+- intitle:"index of" etc
+- intitle:"Index of" .sh_history
+- intitle:"Index of" .bash_history
+- intitle:"index of" passwd
+- intitle:"index of" people.lst
+- intitle:"index of" pwd.db
+- intitle:"index of" etc/shadow
+- intitle:"index of" spwd
+- intitle:"index of" master.passwd
+- intitle:"index of" htpasswd
+- inurl:service.pwd
+
+
+####16.利用google搜索C段服务器信息
+
+
+
+     site:218.87.21.*
+
+
+---
+#3.Shodan
+---
+
+####1.使用搜索过滤
+
+- hostname：搜索指定的主机或域名，例如 hostname:"google"
+- port：搜索指定的端口或服务，例如 port:"21"
+- country：搜索指定的国家，例如 country:"CN"
+- city：搜索指定的城市，例如 city:"Hefei"
+- org：搜索指定的组织或公司，例如 org:"google"
+- isp：搜索指定的ISP供应商，例如 isp:"China Telecom"
+- product：搜索指定的操作系统/软件/平台，例如 product:"Apache httpd"
+- version：搜索指定的软件版本，例如 version:"1.6.2"
+- geo：搜索指定的地理位置，例如 geo:"31.8639, 117.2808"
+- before/after：搜索指定收录时间前后的数据，格式为dd-mm-yy，例如 before:"11-11-15"
+- net：搜索指定的IP地址或子网，例如 net:"210.45.240.0/24"
+
+#### 2.搜索实例
+
+查找位于合肥的 Apache 服务器：
+
+
+    apache city:"Hefei"  
+
+查找位于国内的 Nginx 服务器：
+
+
+    nginx country:"CN"  
+
+查找 GWS(Google Web Server) 服务器：
+
+
+    "Server: gws" hostname:"google"
+
+查找指定网段的华为设备：
+
+    huawei net:"61.191.146.0/24"  
+
+####3.更多帮助信息
+
+[点击一下](https://xiaix.me/shodan-xin-shou-ru-keng-zhi-nan/ "点击一下")
+
+---
+
+#4.Censys
+---
+####1.censys搜索引擎功能与shodan类似，以下几个文档信息。
+
+地址：https://www.censys.io/
+
+- https://www.censys.io/certificates/help帮助文档
+
+- https://www.censys.io/ipv4?q= ip查询
+
+- https://www.censys.io/domain?q= 域名查询
+
+- https://www.censys.io/certificates?q= 证书查询
+
+####2.搜索语法（默认情况下censys支持全文检索）
+
+-  23.0.0.0/8 or 8.8.8.0/24　　可以使用and or not
+
+-  80.http.get.status_code: 200　　指定状态
+
+-  80.http.get.status_code:[200 TO 300]200-300之间的状态码
+
+-  location.country_code: DE　　国家
+
+-  protocols: (“23/telnet” or “21/ftp”)　　协议
+
+-  tags: scada　　标签
+
+-  80.http.get.headers.server：nginx　　服务器类型版本
+
+-  autonomous_system.description: University　　系统描述
+
+-  正则
+
+####3.指定字段
+
+Censys记录是结构化的，允许查询特定字段。例如，您可以使用以下查询搜索具有特定HTTP状态代码的所有主机`80.http.get.status_code: 200`。您可以在“数据定义”选项卡下查看已定义字段的列表，也可以查看主机的详细信息。
+
+####4.布尔逻辑
+
+您可以撰写使用术语多个语句`and， or，not，和括号`。例如，`("Schneider Electric" or Dell) and 23.20.0.0/14`。默认情况下，所有包含的术语都是可选的（即作为or 语句执行）。
+
+####5.网络，主机名和协议
+
+您可以使用CIDR表示法（例如，`ip:23.20.0.0/14`）或通过指定地址范围来搜索IP 地址： `ip:[23.20.0.0 TO 23.20.5.34]`。您可以通过搜索协议字段来搜索为特定协议提供服务的主机，例如， `protocols: "102/s7"`。
+
+可以使用以下语法进行内联DNS查询：`a:facebook.com`和`mx:gmail.com`。
+
+####6.范围
+
+您可以搜索使用数字的范围[和] 包容性的范围和{和}独家范围。例如，`80.http.get.status_code:[200 TO 300]`。日期应使用以下语法格式化：`[2012-01-01 TO 2012-12-31]`。也可以指定单侧限制：` [2012-01-01 TO *]`。警告！ 该TO运营商必须大写。
+
+####7.通配符和正则表达式
+
+Censys默认搜索完整的单词。换句话说，搜索 `Del`不会返回包含该单词的记录`Dell`。通配符搜索可以在单个术语上运行，`?`用于替换单个字符，以及`*`替换零个或多个字符。例如，如果要搜索以Del开头的单词，则可以搜索`Del*`。
+
+您也可以使用正则表达式进行搜索，例如 `metadata.manufacturer:/De[ll]/`。完整的正则表达式语法可在[此处](https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl-regexp-query.html "此处")获得。
+
+####8.推进
+
+boost运算符（`^`）可用于使一个术语比另一个术语更相关。例如， `metadata.manufacturer: Dell^2 OR "Schneider Electric"`更偏向于Dell关键字。
+
+####9.保留字符
+
+必须使用反斜杠转义以下字符：` +` `-` `=` `&` `||` `>` `<` `!` `(` `)` `{` `}` `[` `]` `^` `"` `~` `*` `?` `:` `\` `/`。
+
+---
+
+#5.FoFa
+---
+####1.FoFa搜索引擎偏向资产搜索。
+
+地址：https://fofa.so
+
+####2.搜索语法
+
+- title=”abc” 从标题中搜索abc。例：标题中有北京的网站。
+
+- header=”abc” 从http头中搜索abc。例：jboss服务器。
+
+- body=”abc” 从html正文中搜索abc。例：正文包含Hacked by。
+
+- domain=”qq.com” 搜索根域名带有qq.com的网站。例：根域名是qq.com的网站。
+
+- host=”.gov.cn” 从url中搜索.gov.cn,注意搜索要用host作为名称。
+
+- port=”443” 查找对应443端口的资产。例：查找对应443端口的资产。
+
+- ip=”1.1.1.1” 从ip中搜索包含1.1.1.1的网站,注意搜索要用ip作为名称。
+
+- protocol=”https” 搜索制定协议类型(在开启端口扫描的情况下有效)。例：查询https协议资产。
+
+- city=”Beijing” 搜索指定城市的资产。例：搜索指定城市的资产。
+
+- region=”Zhejiang” 搜索指定行政区的资产。例：搜索指定行政区的资产。
+
+- country=”CN” 搜索指定国家(编码)的资产。例：搜索指定国家(编码)的资产。
+
+- cert=”google.com” 搜索证书(https或者imaps等)中带有google.com的资产。
+
+####3.高级搜索
+
+- title=”powered by” && title!=discuz
+
+- title!=”powered by” && body=discuz
+
+- ( body=”content=\”WordPress” || (header=”X-Pingback” && header=”/xmlrpc.php” && body=”/wp-includes/“) ) && host=”gov.cn”
+
+
+---
+#6.ZoomEye
+---
+####1.钟馗之眼搜索引擎偏向web应用层面的搜索。
+
+地址：https://www.zoomeye.org/
+
+####2.搜索语法
+
+-  app:nginx　　组件名
+
+-  ver:1.0　　版本
+
+-  os:windows　　操作系统
+
+-  country:”China”　　国家
+
+-  city:”hangzhou”　　城市
+
+-  port:80　　端口
+
+-  hostname:google　　主机名
+
+-  site:thief.one　　网站域名
+
+-  desc:nmask　　描述
+
+-  keywords:nmask’blog　　关键词
+
+-  service:ftp　　服务类型
+
+-  ip:8.8.8.8ip地址
+
+-  cidr:8.8.8.8/24ip地址段
+
+####3.在设备和网站结果间切换
+
+ZoomEye 将默认搜索公网设备，搜索结果页面左上角有公网设备和 Web 服务两个连接。 因此您可以快速切换两种结果。
+
+在输入关键字时，自动展开的智能提示下拉框最底部有两个指定搜索的选项。 用方向键选定其中一个，回车即可执行搜索。
+
+ZoomEye 使用 Xmap 和 Wmap ：两个能获取 Web 服务 和公网设备指纹的强大的爬虫引擎定期全网扫描，抓取和索引公网设备指纹。
+
+这是您探索网络空间的利器。
+
+####4.主机设备搜索
+
+组件名称
+
+
+    
+    app: 组件名
+    
+    ver: 组件版本
+    
+    Apache httpd, 版本2.2.16: app:"Apache httpd" +ver:"2.2.16"
+
+端口
+
+
+
+    port：开放端口
+    
+    搜索远程桌面连接: port:3389
+    
+    搜索SSH: port:22
+    
+    一些服务器可能监听了非标准的端口。要按照更准确的协议进行检索，请使用 "service:" 过滤器。
+
+操作系统
+
+
+    os: 操作系统。os:linux
+
+服务
+
+    
+        service: 结果分析中的"服务名"字段
+    
+    公网路由器: service:routersetup
+    
+    公网摄像头: service:webcam
+    
+    完整的"服务名"列表，请参阅https://svn.nmap.org/nmap/nmap-services
+
+主机名
+
+    hostname: 分析列表中的"主机名"字段。例子: hostname:google.com
+
+位置
+
+
+
+    country: 国家或者地区代码。
+    
+    city: 城市名称。
+    
+    请搜索美国的Apache服务器: app:Apache +country:US
+    
+    请搜索英国的Sendmail服务器: app:Sendmail +country:UK
+    
+    完整的国家代码, 请参阅: 国家地区代码-维基百科
+
+IP地址
+
+
+    ip: 搜索一个指定的IP地址。
+
+    Google的公共DNS服务器: ip:8.8.8.8
+    
+    IPV6地址: ip:"2600:3c00::f03c:91ff:fefc:574a"
+
+CIDR
+
+
+    IPV4的CIDR网段。例子: cidr:8.8.8.8/24
+    
+    IPV6的CIDR网段。例子: cidr:2a01:e00::/24
+
+####5.Web应用搜索
+
+组件名称
+
+
+
+    app: 组件名。
+    
+    ver: 组件版本。
+    
+    Apache httpd, 版本2.2.16: app:"Apache httpd" +ver:"2.2.16"
+
+操作系统
+
+
+
+    os: 操作系统。os:linux
+
+网站
+
+
+    site: 网站域名。site:google.com
+    
+标题
+
+
+    title: 页面标题, 在<title>例子: title:Nginx
+
+关键字
+
+
+    keywords: 定义的页面关键字。 例子: keywords:Nginx
+
+描述
+
+
+    keywords: 定义的页面说明。 例子: desc:Nginx
+
+HTTP头
+
+
+    headers: HTPP请求中的Headers。例子: headers:Server
+    
+位置
+
+
+    country: 国家或者地区代码。
+
+city: 城市名称。
+
+
+    
+    搜索美国的Apache服务器: app:Apache +country:US
+    
+    搜索英国的Sendmail服务器: app:Sendmail +country:UK
+    
+    完整的国家代码，请参阅: 国家地区代码-维基百科
+
+IP地址
+
+
+    ip:搜索一个指定的IP地址
+
+CIDR
+
+
+    IP的 CIDR 网段。例子: cidr:8.8.8.8/24
+
+---
+#7.Dnsdb
+---
+####1.dnsdb搜索引擎是一款针对dbs解析的查询平台。
+
+地址：https://www.dnsdb.io/
+
+####2.搜索语法
+
+DnsDB查询语法结构为条件1 条件2 条件3 …., 每个条件以空格间隔, DnsDB 会把满足所有查询条件的结果返回给用户.
+
+####3.域名查询条件
+
+域名查询是指查询顶级私有域名所有的DNS记录, 查询语法为domain:.
+例如查询google.com 的所有DNS记录: domain:google.com.
+域名查询可以省略domain:.
+
+####4.主机查询条件
+
+查询语法: `host:`
+例如查询主机地址为mp3.example.com的DNS记录:` host:map3.example.com`
+主机查询条件与域名查询查询条件的区别在于, 主机查询匹配的是DNS记录的Host值
+
+按DNS记录类型查询
+查询语法:` type:.`
+例如只查询A记录: `type:a`
+使用条件:必须存在`domain:`或者`host:`条件,才可以使用`type:`查询语法
+
+按IP限制
+查询语法: `ip:`
+查询指定IP:` ip:8.8.8.8`, 该查询与直接输入`8.8.8.8`进行查询等效
+查询指定IP范围: `ip:8.8.8.8-8.8.255.255`
+CIDR: `ip:8.8.0.0/24`
+IP最大范围限制65536个
+
+条件组合查询的例子
+查询google.com的所有A记录: `google.com type:a`
