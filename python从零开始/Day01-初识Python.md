@@ -10,9 +10,7 @@ Python 是一种面向对象的解释型计算机程序设计语言，在设计�
 
 额，其实只要是个编程语言几乎可以做你任何想做的软件程序，python也不例外，他可以做一些电脑上使用的软件，比如sublime text编辑器；网站豆瓣就是使用
 
-python制作的；python还可以做一些服务器的脚本管理服务器使用等等。
-
-再一次明确一下学习python的目的。
+python制作的；python还可以做一些服务器的脚本管理服务器使用等等。再一次明确一下学习python的目的。
 
 我觉得学习任何知识都应该带有一定的目标性，如果目标性不明确人就容易失去动力，慢慢的就会放弃。
 
@@ -24,22 +22,14 @@ python制作的；python还可以做一些服务器的脚本管理服务器使�
 
 ### 3.在window上安装python
 
-在windows上安装python特别简单， 登录python的官方网站 https://www.python.org/ ，点击download，找到 windows x86-64 executable installer下载，因
+在windows上安装python特别简单， 登录python的官方网站 https://www.python.org/ ，点击download，找到 windows x86-64 executable installer下载，
 
-为我的电脑是64位的所以会选择这个x86-64下载，如果你的电脑是32位的直接选择 X86标记的文件下载就可以了。
+因为我的电脑是64位的所以会选择这个x86-64下载，如果你的电脑是32位的直接选择 X86标记的文件下载就可以了。这是一个离线安装包。使用这个安装包比较稳定。
 
-这是一个离线安装包。使用这个安装包比较稳定。
+我们使用python3.7.3的版本下载。python3在window上的安装方式特别人性化了，如果你并不是很懂直接点击 Install Now 就可以了，但是一定要记得点击下面的
 
-我们使用python3.7.3的版本下载。
+两个选项，最最重要的是点击add python 3.7.3 to PATH。这个选项会决定你是否可以用windows命令提示符直接操作python语言。
 
-python3在window上的安装方式特别人性化了，如果你并不是很懂直接点击 Install Now 就可以了，但是一定要记得点击下面的两个选项，
-
-最最重要的是点击add python 3.7.3 to PATH。
-
-这个选项会决定你是否可以用windows命令提示符直接操作python语言。
-
-如果安装成功了，我们可以在开始菜单找到python项目
-
-我们搜索cmd，右击以管理员身份运行命令提示符。
+如果安装成功了，我们可以在开始菜单找到python项目,我们搜索cmd，右击以管理员身份运行命令提示符。
 
 我们在命令提示符里输入python，看到下面会有一串命令提示的信息，出现了三个>>>这就表明我们python安装成功了。
