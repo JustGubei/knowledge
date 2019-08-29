@@ -1,4 +1,4 @@
-#***1. if语句***
+# ***1. if语句***
 ```
 1.if 条件语句：
 	代码块
@@ -7,7 +7,7 @@
 执行过程:先判断条件语句是否为True，如果是就执行代码块1，执行完代码块再执行其他语句。
 		 如果是Flase，直接执行其他语句
 
-# 2.if--else
+2.if--else
 if 条件语句：
 	代码块1
 else：
@@ -37,7 +37,7 @@ else：
 	执行语句块4
 
 
-#5. 判断数据的类型
+5. 判断数据的类型
 # isinstance(值，类型名) -->判断指定的值是否是指定的类型
 #，如果是返回True，否则返回False
 
@@ -56,7 +56,7 @@ print('======')
 ```
 ![判断一个数是偶数还是奇数](https://upload-images.jianshu.io/upload_images/13183695-1396c2a5b7336bb7.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
-#***2. 数据类型的转换***
+# ***2. 数据类型的转换***
 ##### 2.1 其他的数据类型转换成整型:int()
 ```
 浮点型:只保留整数部分
@@ -104,9 +104,9 @@ print(bool('123'))
 ```
 ![判断一个字符串是否是空串](https://upload-images.jianshu.io/upload_images/13183695-09325ad32914569b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 ![判断一个数是否是0](https://upload-images.jianshu.io/upload_images/13183695-9d4858e2656a1553.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
-#***3. 循环***
+# ***3. 循环***
 pthon中的循环有  for循环和while循环
-#####3.1  for循环：
+##### 3.1  for循环：
 ```
 """
 for 变量名 in 序列：
@@ -195,14 +195,14 @@ for x in range(1,10,2):
 9
 [Finished in 0.2s]
 
-#练习：计算1-100累加和
+# 练习：计算1-100累加和
 sum1 = 0
 for x in range(1,101):
 	sum1 += x
 print(sum1)
 ```
 
-#####3.2 while循环：
+##### 3.2 while循环：
 ```
 while 条件语句
 	循环体
@@ -225,7 +225,7 @@ python中没有do-while循环
 # 	print('aaa')
 # 	flag = False
 
-#使用while循环计算1+2+3+..+100
+# 使用while循环计算1+2+3+..+100
 num = 1 #保存数字1-100
 sum = 0	#保存和
 while num <= 100:
@@ -244,7 +244,7 @@ while num1 <= 100:
 	num1 +=2
 print(sum1)
 ```
-#***4.continue和break***
+# ***4.continue和break***
 ```
 """
 break和continue两个字，都是作用域循环当中，用来结束循环的。
@@ -285,7 +285,7 @@ for x in range(100,1001):
 		break
 
 ```
-#***4.for和while的选择***
+# ***4.for和while的选择***
 ```
 """
 for循环的循环次数是确定的，while循环的次数可以不确定
@@ -304,7 +304,7 @@ input():接受从控制台输入数据的数据（输入的数据以回车结束
 
 # print('=====')
 
-#3.产生随机数
+3.产生随机数
 #python中有一个内置模块，可以产生随机数：random
 """
 randint(m,n):产生一个0~n的随机数（整数）
@@ -315,6 +315,7 @@ import random
 number = random.randint(1,100)
 print(number)
 ```
+---
 Day04 作业：
 读程序，总结程序的功能
 1.
