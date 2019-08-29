@@ -253,7 +253,7 @@ else:
 ---
 
 Day03作业：
-
+```
  2-3 个性化消息: 将用户的姓名存到一个变量中，并向该用户显示一条消息。显示的消息应非常简单，如“Hello Eric, would you like to learn some Python today?”。
 ```
 name = 'Eric'
@@ -290,7 +290,7 @@ print(name.rstrip())
 print(name.strip())
 ```
 ![结果.png](https://upload-images.jianshu.io/upload_images/13183695-3a802193be9ef794.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
-
+```
 
 
 
