@@ -1,4 +1,4 @@
-#***1.1 认识字符串***
+# ***1.1 认识字符串***
 ##### 1.1什么是字符串
 ```
 a.使用单引号或者双引号括起来的字符串的字符集就是字符串.
@@ -38,7 +38,7 @@ print(chr(0X4eef))
 print('abc'>'aa')
 print(ord('a'))
 ```
-#***2. 获取字符串中的字符***
+# ***2. 获取字符串中的字符***
 ##### 2.1 python的字符串，实质是一个有序的字符序列
 ```
 # 获取字符串长度：（长度指的是字符串中字符的个数）
@@ -90,7 +90,7 @@ print(str3[3:1:-1])
 
 print(str3[::-1])
 ```
-#***3. 字符串中的运算符***
+# ***3. 字符串中的运算符***
 ##### 3.1 字符串拼接
 ```
 # 字符串1+字符串2
@@ -151,7 +151,7 @@ print(str5)
 str6 = '%d的八进制是0o%o' % (number,number)
 print(str6)
 ```
-#***4.字符串相关方法***
+# ***4.字符串相关方法***
 ```
 # 字符串相关方法的通用格式: 字符串.函数()
 
@@ -197,7 +197,7 @@ print(new_str)
 # 6.
 print(max('abcZ'))
 ```
-#***5.if**
+# ***5.if***
 ```
 # if语句
 """
@@ -250,6 +250,8 @@ else:
 	print('不及格')
 ```
 
+---
+
 Day03作业：
 
  2-3 个性化消息: 将用户的姓名存到一个变量中，并向该用户显示一条消息。显示的消息应非常简单，如“Hello Eric, would you like to learn some Python today?”。
@@ -259,27 +261,37 @@ str1= 'Hello %s, would you like to learn some Python today?' % (name)
 print(str1)
 ```
 ![结果.png](https://upload-images.jianshu.io/upload_images/13183695-e4ce87f5d169afeb.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
 2-4 调整名字的大小写: 将一个人名存储到一个变量中，再以小写、大写和首字母大写的方式显示这个人名。
+
 ```
 name='Eric'
 print(name.lower())
 print(name.upper())
 print(name.capitalize())
 ```
+
 ![结果.png](https://upload-images.jianshu.io/upload_images/13183695-b7681a6b8f1bf9aa.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
 2-5 名言: 找一句你钦佩的名人说的名言，将这个名人的姓名和他的名言打印出来。输出应类似于下面这样(包括引号):Albert Einstein once said, “A person who never made a mistake never tried anything new.”
+
 ```
 print('Albert Einstein once said, “A person who never made a mistake never tried anything new.”')
 ```
 ![结果.png](https://upload-images.jianshu.io/upload_images/13183695-e126f602fedd0dd0.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
 2-6 名言2: 重复练习2-5，但将名人的姓名存储在变量famous_person 中，再创建要显示的消息，并将其存储在变量message 中，然后打印这条消息。
+
 ```
 famous_person = 'Albert Einstein'
 message = '%s once said, “A person who never made a mistake never tried anything new.”' % (famous_person)
 print(message)
 ```
+
 ![结果.png](https://upload-images.jianshu.io/upload_images/13183695-f338f03fd5524d15.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
 2-7 剔除人名中的空白: 存储一个人名，并在其开头和末尾都包含一些空白字符。务必至少使用字符组合"\t" 和"\n" 各一次。 打印这个人名，以显示其开头和末尾的空白。然后，分别使用剔除函数lstrip() 、rstrip() 和strip() 对人名进行处理，并将结果打印出来。 
+
 ```
 name = '\t\nEinstein\n'
 print(name)
@@ -287,6 +299,7 @@ print(name.lstrip())
 print(name.rstrip())
 print(name.strip())
 ```
+
 ![结果.png](https://upload-images.jianshu.io/upload_images/13183695-3a802193be9ef794.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 
